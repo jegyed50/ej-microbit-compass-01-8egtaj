@@ -6,6 +6,7 @@ input.onButtonPressed(Button.AB, function () {
 // Állandóan
 basic.forever(function () {
     degrees = input.compassHeading()
+    serial.writeValue("degrees", degrees)
     if (degrees < 45) {
         basic.showArrow(ArrowNames.North)
     } else if (degrees < 135) {
